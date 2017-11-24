@@ -1,0 +1,136 @@
+.confirmList{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 100%;
+  .table{
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 80%;
+    .t_header{
+      display: flex;
+      justify-content: space-between;
+      background-color: #b7b2b2;
+      margin: 0 -0.5rem;
+      padding: 0.5rem;
+    }
+    .t_body{
+      display: flex;
+      flex-direction: column;
+      margin: 0 -0.5rem;
+      .singleData{
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem;
+        text-align: center;
+        align-items: center;
+        .name{
+          width: 25%;
+          text-align: left;
+        }
+        .number{
+          display: flex;
+          align-items: center;
+          .price{
+        //    padding-right: 1rem;
+          }
+          .minus, .plus{
+            border: 0.1rem solid #ddd;
+            border-radius: 3rem;
+            height: 2.2rem;
+            width: 2.2rem;
+            margin: 0 0.6rem;
+          }
+          .icon_color{
+            color: red;
+            font-size: 2rem;
+          }
+        }
+        .singleTotalPrice{
+          color: red;
+          width: 2rem;
+        }
+      }
+      .odd{
+        background-color: #f5f5f5;
+      }
+      .even{
+        background-color: white;
+
+      }
+
+    }
+  }
+  .order_confirm{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    .peopleCounts{
+      display: inline-flex;
+      padding-top: 2rem;
+      .selects{
+        border: 0.1rem solid #ddd8ce;
+        width: 5rem;
+        line-height: 1.4rem;
+        height: 1.4rem;
+        text-align: center;
+        cursor: pointer;
+        .default{
+          position: relative;
+          &:after{
+            content: " ";
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid red;
+            width: 0;
+            position: absolute;
+            top: 0.6rem;
+            right: 0.5rem;
+          }
+
+        }
+
+        .peoples{
+          position: absolute;
+          bottom: 4.9rem;
+          left: 3.5rem;
+          border-width: 0 0.1rem;
+          border-style: solid;
+          border-color: #ddd8ce;
+          text-align: center;
+
+          .people{
+            border-top: 0.1rem solid #ddd8ce;
+            width: 5rem;
+          }
+        }
+        .visible {
+          visibility: visible;
+        }
+        .invisible{
+          display: none;
+        }
+
+      }
+      .red{
+        background-color: red;
+      }
+      .open{
+        .default{
+          &:after{
+            border-bottom: 5px solid red;
+            border-top: none;
+          }
+
+        }
+      }
+    }
+    .chooseButton{
+
+    }
+
+  }
+
+
+
+}

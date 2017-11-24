@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="E:\private\font-awesome-4.7.0\font-awesome-4.7.0\css\font-awesome.min.css"/>
+    <script>
+        window.onload = function () {
+            var canvas = document.getElementById("canvas");
+            if (canvas.getContext){
+                var ctx = canvas.getContext('2d');
+
+                //二次曲线
+                ctx.fillStyle = '#ff4d07';
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = "#0090D2";
+                ctx.beginPath();
+                ctx.moveTo(86, 38);
+                ctx.bezierCurveTo(38, 14, 28, 58, 100, 120);
+                ctx.lineTo(90, 96);
+                ctx.lineTo(97, 85);
+                ctx.lineTo(80, 60);
+                ctx.lineTo(86, 38);
+
+                ctx.moveTo(120, 38);
+                ctx.bezierCurveTo(169, 14, 170, 58, 100, 120);
+                ctx.lineTo(98, 100);
+                ctx.lineTo(98, 96);
+                ctx.lineTo(105, 85);
+                ctx.lineTo(102, 60);
+                ctx.lineTo(120, 38);
+
+                ctx.fill();
+
+
+                ctx.beginPath();
+                ctx.arc(150,150,20,0,4*Math.PI);
+                ctx.stroke();
+
+            }
+        }
+
+    </script>
+</head>
+<body>
+<canvas id="canvas" width="500px" height="500px"></canvas>
+<i class="fa fa-angle-double-down fa-3x pull-left" style="color:#00B7FF"></i>
+
+</body>
+</html>
